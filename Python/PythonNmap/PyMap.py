@@ -1,7 +1,6 @@
 
  
 import nmap
-from pprint import pprint
 
 while True:
     print("""\nWhat do you want to do?\n
