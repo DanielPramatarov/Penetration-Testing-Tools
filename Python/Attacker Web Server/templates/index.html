@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Re-authentication</title>
+<link rel="stylesheet" href="../static/css/login.css">
+<link rel="stylesheet" href="../static/css/nav.css">
+<link rel="stylesheet" href="../static/css/popup.css">
+
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/virus">Virus</a></li>
+        <li><a href="/YouAreHacked">U R Hacked Page</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+<h1>Attacker's Web Site </h1>
+<!-- <img src="DemoL7.jpg" alt="Flowers in Chania" width="1200" height="545"> -->
+
+<form action="/login" method="post">
+    <div class="imgcontainer">
+      <img src="../static/images/shieldSecurity.jpg" alt="Avatar" class="avatar" width="200" height="245">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+          
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+
+  </form>
+<button class="open-button" onclick="openForm()">Information</button>
+  
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h2>Infromation</h2>
+      <p>We need to be sure that you are not malicious user.After successful authentication you'r going to be redirected to your site</p>
+
+  
+    
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  
+  <script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+  
+</body>
+</html>
